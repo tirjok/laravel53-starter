@@ -28,6 +28,9 @@ router.map({
     },
     '/about': {
         component: require('./components/About.vue')
+    },
+    '/contact': {
+        component: require('./components/Contact.vue')
     }
 });
 
