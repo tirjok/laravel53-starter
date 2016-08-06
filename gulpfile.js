@@ -15,5 +15,8 @@ require('laravel-elixir-vue');
 
 elixir(function(mix) {
     mix.sass('app.scss')
+        .styles([
+            'carousel.css'
+        ])
        .webpack('app.js');
 });
