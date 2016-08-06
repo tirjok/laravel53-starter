@@ -18,7 +18,10 @@ require('bootstrap-sass/assets/javascripts/bootstrap');
  */
 
 window.Vue = require('vue');
+window.VueRouter = require('vue-router');
 require('vue-resource');
+
+Vue.use(VueRouter);
 
 /**
  * We'll register a HTTP interceptor to attach the "XSRF" header to each of

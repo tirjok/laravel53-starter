@@ -1,5 +1,5 @@
 <template>
-
+    <carousel></carousel>
     <div class="container marketing">
         <div class="row">
                 <div class="col-lg-4">
@@ -25,6 +25,8 @@
 </template>
 
 <script>
+    Vue.component('carousel', require('../components/Carousel.vue'));
+
     export default {
         ready() {
             console.log('Component ready.')
