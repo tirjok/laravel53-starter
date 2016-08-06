@@ -1,45 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Laravel</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/css/app.css"/>
+        <link rel="stylesheet" href="/css/all.css"/>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+        <title>Laravel 5.3 with Vue</title>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato', sans-serif;
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
     </head>
     <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
+        <navbar app-name="{!! config('app.name') !!}"></navbar>
+        <carousel></carousel>
+        <app></app>
+
+        <script src="/js/app.js"></script>
     </body>
 </html>
