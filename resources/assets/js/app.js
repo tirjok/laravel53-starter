@@ -14,11 +14,30 @@ require('./bootstrap');
  * the application, or feel free to tweak this setup for your needs.
  */
 Vue.component('navbar', require('./components/Navbar.vue'));
-Vue.component('carousel', require('./components/Carousel.vue'));
 
-Vue.component('app', require('./components/App.vue'));
+var Bar = Vue.extend({
+    template: '<p>This is bar!</p>'
+})
 
+var App = Vue.extend({});
+var router = new VueRouter();
 
-var app = new Vue({
-    el: 'body'
+router.map({
+    '/': {
+        component: require('./components/Home.vue')
+    },
+    '/about': {
+        component: require('./components/About.vue')
+    },
+    '/contact': {
+        component: require('./components/Contact.vue')
+    },
+    '/login': {
+        component: require('./components/auth/Login.vue')
+    },
+    '/register': {
+        component: require('./components/auth/Register.vue')
+    }
 });
+
+router.start(App, '#app');
