@@ -31,6 +31,12 @@ router.map({
     },
     '/contact': {
         component: require('./components/Contact.vue')
+    },
+    '/login': {
+        component: require('./components/auth/Login.vue')
+    },
+    '/register': {
+        component: require('./components/auth/Register.vue')
     }
 });
 
